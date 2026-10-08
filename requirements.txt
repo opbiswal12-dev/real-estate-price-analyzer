@@ -1,0 +1,15 @@
+# virtual env
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# data
+*.csv
+
+# model output
+models/
+
+# editor files
+.vscode/
+.DS_Store
