@@ -1,15 +1,5 @@
-# virtual env
-.venv/
-venv/
-__pycache__/
-*.pyc
-
-# data
-*.csv
-
-# model output
-models/
-
-# editor files
-.vscode/
-.DS_Store
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4
+scipy>=1.11
+joblib>=1.3

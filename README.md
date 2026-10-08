@@ -1,6 +1,6 @@
 # Real Estate Price Analyzer
 
-A Python project that estimates property prices using a multiple linear regression model trained on structured housing data, with a web-scraping module for collecting listing data from public real estate pages.
+A Python project that estimates property prices using a multiple linear regression model trained on structured housing data, with a web-scraping module for collecting listing data from public real-estate listings.
 
 ## What it does
 - Scrapes listing data such as price, location, size, bedrooms, bathrooms, and amenities
@@ -16,15 +16,18 @@ real-estate-price-analyzer/
 ├── requirements.txt
 ├── .gitignore
 ├── main.py
+├── fake_news_detector.py
 ├── data/
-│   └── sample_houses.csv
+│   ├── sample_houses.csv
+│   └── fake_news_dataset.csv
 ├── src/
 │   ├── __init__.py
 │   ├── scraper.py
 │   ├── data_processor.py
-│   └── model.py
+│   ├── model.py
+│   └── fake_news_model.py
 └── models/
-    └── price_model.pkl
+    └── fake_news_model.joblib
 ```
 
 ## Tech stack
@@ -34,6 +37,7 @@ real-estate-price-analyzer/
 - BeautifulSoup4
 - requests
 - NumPy
+- joblib
 
 ## Setup
 
@@ -77,8 +81,33 @@ python main.py predict \
   --has_lake_view 0
 ```
 
+## Extra AI model: Fake News Detector
+
+This repository also includes a text-based fake news detector that classifies whether a news article is likely real or fake.
+
+### Model design
+- NLP preprocessing with text normalization
+- TF-IDF vectorization for word and bigram features
+- Text-stat feature engineering (word count, punctuation count, uppercase ratio, etc.)
+- Ensemble model: Random Forest + Logistic Regression with soft voting
+- Evaluation on accuracy, precision, recall, F1-score, and ROC-AUC
+
+### Run the fake news detector
+
+```bash
+python fake_news_detector.py train --dataset data/fake_news_dataset.csv
+python fake_news_detector.py predict --text "Breaking news: government officials confirmed a major policy update today."
+```
+
+### Demo output
+
+```text
+Prediction: REAL NEWS
+Confidence: 94.7%
+```
+
 ## Notes
-- The current model is intentionally simple and easy to extend.
+- The current real-estate model is intentionally simple and easy to extend.
 - For real-world production use, you should replace the sample dataset with data from a specific property website and validate the scraped field names against the target site.
 - Feature engineering and a richer dataset will improve predictive accuracy.
 
@@ -87,3 +116,4 @@ python main.py predict \
 - Use `OneHotEncoder` for richer location representation
 - Build a more robust scraper with selectors for actual listing pages
 - Deploy via a small Streamlit or Flask app
+- Expand the fake news detector with transformer models for higher accuracy on real-world news datasets
