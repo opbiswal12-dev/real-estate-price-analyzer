@@ -1,6 +1,6 @@
 # Real Estate Price Analyzer
 
-A Python project that estimates property prices using a multiple linear regression model trained on structured housing data, with a web-scraping module for collecting listing data from public real estate websites.
+A Python project that estimates property prices using a multiple linear regression model trained on structured housing data, with a web-scraping module for collecting listing data from public real estate sites.
 
 ## 🏠 Features
 
