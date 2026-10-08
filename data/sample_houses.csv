@@ -1,6 +1,21 @@
-pandas>=2.0.0
-requests>=2.28.0
-beautifulsoup4>=4.11.0
-scikit-learn>=1.3.0
-numpy>=1.24.0
-
+location,price,bedrooms,bathrooms,area_sqft,has_pool,has_garage,has_parking,has_garden,has_lake_view
+Austin, TX,420000,3,2,1800,0,1,1,1,0
+Austin, TX,510000,4,3,2200,1,1,1,1,0
+Dallas, TX,365000,2,2,1500,0,1,1,0,0
+Dallas, TX,475000,3,2,2100,1,1,1,1,0
+Houston, TX,390000,3,2,1700,0,1,1,0,0
+Houston, TX,560000,4,3,2600,1,2,1,1,0
+Miami, FL,580000,3,2,1900,1,1,1,1,1
+Miami, FL,760000,4,3,2900,1,2,1,1,1
+Seattle, WA,620000,3,2,2200,0,1,1,1,0
+Seattle, WA,810000,4,3,3100,1,2,1,1,0
+Phoenix, AZ,410000,3,2,1800,1,1,1,1,0
+Phoenix, AZ,495000,4,3,2400,1,2,1,1,0
+Austin, TX,450000,3,2.5,1950,0,1,1,1,0
+Dallas, TX,420000,3,2,1900,0,1,1,0,0
+Houston, TX,480000,4,2.5,2300,1,1,1,1,0
+Miami, FL,650000,3,2.5,2100,1,1,1,1,1
+Seattle, WA,720000,3,2.5,2400,0,1,1,1,0
+Phoenix, AZ,445000,3,2,2000,1,1,1,0,0
+Austin, TX,540000,4,3,2400,1,2,1,1,0
+Dallas, TX,500000,4,3,2200,1,1,1,1,0
